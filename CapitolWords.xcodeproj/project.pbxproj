@@ -7,55 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C07C3D001A361CB800B78E9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3CFF1A361CB800B78E9F /* main.m */; };
-		C07C3D031A361CB800B78E9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D021A361CB800B78E9F /* AppDelegate.m */; };
-		C07C3D061A361CB800B78E9F /* CapitolWords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D041A361CB800B78E9F /* CapitolWords.xcdatamodeld */; };
-		C07C3D091A361CB800B78E9F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D081A361CB800B78E9F /* MasterViewController.m */; };
-		C07C3D0C1A361CB800B78E9F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D0B1A361CB800B78E9F /* DetailViewController.m */; };
-		C07C3D0F1A361CB800B78E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D0D1A361CB800B78E9F /* Main.storyboard */; };
-		C07C3D111A361CB800B78E9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D101A361CB800B78E9F /* Images.xcassets */; };
-		C07C3D141A361CB800B78E9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D121A361CB800B78E9F /* LaunchScreen.xib */; };
-		C07C3D201A361CB900B78E9F /* CapitolWordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D1F1A361CB900B78E9F /* CapitolWordsTests.m */; };
+		C07C3D381A361F5000B78E9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D371A361F5000B78E9F /* main.m */; };
+		C07C3D3B1A361F5000B78E9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D3A1A361F5000B78E9F /* AppDelegate.m */; };
+		C07C3D3E1A361F5000B78E9F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D3D1A361F5000B78E9F /* MasterViewController.m */; };
+		C07C3D411A361F5000B78E9F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D401A361F5000B78E9F /* DetailViewController.m */; };
+		C07C3D441A361F5000B78E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D421A361F5000B78E9F /* Main.storyboard */; };
+		C07C3D461A361F5000B78E9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D451A361F5000B78E9F /* Images.xcassets */; };
+		C07C3D491A361F5000B78E9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07C3D471A361F5000B78E9F /* LaunchScreen.xib */; };
+		C07C3D551A361F5000B78E9F /* CapitolWordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D541A361F5000B78E9F /* CapitolWordsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C07C3D1A1A361CB800B78E9F /* PBXContainerItemProxy */ = {
+		C07C3D4F1A361F5000B78E9F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C07C3CF21A361CB800B78E9F /* Project object */;
+			containerPortal = C07C3D2A1A361F5000B78E9F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C07C3CF91A361CB800B78E9F;
+			remoteGlobalIDString = C07C3D311A361F5000B78E9F;
 			remoteInfo = CapitolWords;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C07C3CFA1A361CB800B78E9F /* CapitolWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitolWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C07C3CFE1A361CB800B78E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C07C3CFF1A361CB800B78E9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C07C3D011A361CB800B78E9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C07C3D021A361CB800B78E9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C07C3D051A361CB800B78E9F /* CapitolWords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CapitolWords.xcdatamodel; sourceTree = "<group>"; };
-		C07C3D071A361CB800B78E9F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		C07C3D081A361CB800B78E9F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		C07C3D0A1A361CB800B78E9F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		C07C3D0B1A361CB800B78E9F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		C07C3D0E1A361CB800B78E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C07C3D101A361CB800B78E9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C07C3D131A361CB800B78E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C07C3D191A361CB800B78E9F /* CapitolWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapitolWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C07C3D1E1A361CB900B78E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C07C3D1F1A361CB900B78E9F /* CapitolWordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapitolWordsTests.m; sourceTree = "<group>"; };
+		C07C3D321A361F5000B78E9F /* CapitolWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitolWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07C3D361A361F5000B78E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07C3D371A361F5000B78E9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C07C3D391A361F5000B78E9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C07C3D3A1A361F5000B78E9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C07C3D3C1A361F5000B78E9F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		C07C3D3D1A361F5000B78E9F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		C07C3D3F1A361F5000B78E9F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C07C3D401A361F5000B78E9F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C07C3D431A361F5000B78E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C07C3D451A361F5000B78E9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C07C3D481A361F5000B78E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C07C3D4E1A361F5000B78E9F /* CapitolWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapitolWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07C3D531A361F5000B78E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07C3D541A361F5000B78E9F /* CapitolWordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapitolWordsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C07C3CF71A361CB800B78E9F /* Frameworks */ = {
+		C07C3D2F1A361F5000B78E9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C07C3D161A361CB800B78E9F /* Frameworks */ = {
+		C07C3D4B1A361F5000B78E9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,64 +63,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C07C3CF11A361CB800B78E9F = {
+		C07C3D291A361F5000B78E9F = {
 			isa = PBXGroup;
 			children = (
-				C07C3CFC1A361CB800B78E9F /* CapitolWords */,
-				C07C3D1C1A361CB900B78E9F /* CapitolWordsTests */,
-				C07C3CFB1A361CB800B78E9F /* Products */,
+				C07C3D341A361F5000B78E9F /* CapitolWords */,
+				C07C3D511A361F5000B78E9F /* CapitolWordsTests */,
+				C07C3D331A361F5000B78E9F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C07C3CFB1A361CB800B78E9F /* Products */ = {
+		C07C3D331A361F5000B78E9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C07C3CFA1A361CB800B78E9F /* CapitolWords.app */,
-				C07C3D191A361CB800B78E9F /* CapitolWordsTests.xctest */,
+				C07C3D321A361F5000B78E9F /* CapitolWords.app */,
+				C07C3D4E1A361F5000B78E9F /* CapitolWordsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C07C3CFC1A361CB800B78E9F /* CapitolWords */ = {
+		C07C3D341A361F5000B78E9F /* CapitolWords */ = {
 			isa = PBXGroup;
 			children = (
-				C07C3D0A1A361CB800B78E9F /* DetailViewController.h */,
-				C07C3D0B1A361CB800B78E9F /* DetailViewController.m */,
-				C07C3D071A361CB800B78E9F /* MasterViewController.h */,
-				C07C3D081A361CB800B78E9F /* MasterViewController.m */,
-				C07C3D011A361CB800B78E9F /* AppDelegate.h */,
-				C07C3D021A361CB800B78E9F /* AppDelegate.m */,
-				C07C3D0D1A361CB800B78E9F /* Main.storyboard */,
-				C07C3D101A361CB800B78E9F /* Images.xcassets */,
-				C07C3D121A361CB800B78E9F /* LaunchScreen.xib */,
-				C07C3D041A361CB800B78E9F /* CapitolWords.xcdatamodeld */,
-				C07C3CFD1A361CB800B78E9F /* Supporting Files */,
+				C07C3D391A361F5000B78E9F /* AppDelegate.h */,
+				C07C3D3A1A361F5000B78E9F /* AppDelegate.m */,
+				C07C3D3C1A361F5000B78E9F /* MasterViewController.h */,
+				C07C3D3D1A361F5000B78E9F /* MasterViewController.m */,
+				C07C3D3F1A361F5000B78E9F /* DetailViewController.h */,
+				C07C3D401A361F5000B78E9F /* DetailViewController.m */,
+				C07C3D421A361F5000B78E9F /* Main.storyboard */,
+				C07C3D451A361F5000B78E9F /* Images.xcassets */,
+				C07C3D471A361F5000B78E9F /* LaunchScreen.xib */,
+				C07C3D351A361F5000B78E9F /* Supporting Files */,
 			);
 			path = CapitolWords;
 			sourceTree = "<group>";
 		};
-		C07C3CFD1A361CB800B78E9F /* Supporting Files */ = {
+		C07C3D351A361F5000B78E9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C07C3CFE1A361CB800B78E9F /* Info.plist */,
-				C07C3CFF1A361CB800B78E9F /* main.m */,
+				C07C3D361A361F5000B78E9F /* Info.plist */,
+				C07C3D371A361F5000B78E9F /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C07C3D1C1A361CB900B78E9F /* CapitolWordsTests */ = {
+		C07C3D511A361F5000B78E9F /* CapitolWordsTests */ = {
 			isa = PBXGroup;
 			children = (
-				C07C3D1F1A361CB900B78E9F /* CapitolWordsTests.m */,
-				C07C3D1D1A361CB900B78E9F /* Supporting Files */,
+				C07C3D541A361F5000B78E9F /* CapitolWordsTests.m */,
+				C07C3D521A361F5000B78E9F /* Supporting Files */,
 			);
 			path = CapitolWordsTests;
 			sourceTree = "<group>";
 		};
-		C07C3D1D1A361CB900B78E9F /* Supporting Files */ = {
+		C07C3D521A361F5000B78E9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C07C3D1E1A361CB900B78E9F /* Info.plist */,
+				C07C3D531A361F5000B78E9F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -130,13 +127,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C07C3CF91A361CB800B78E9F /* CapitolWords */ = {
+		C07C3D311A361F5000B78E9F /* CapitolWords */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C07C3D231A361CB900B78E9F /* Build configuration list for PBXNativeTarget "CapitolWords" */;
+			buildConfigurationList = C07C3D581A361F5000B78E9F /* Build configuration list for PBXNativeTarget "CapitolWords" */;
 			buildPhases = (
-				C07C3CF61A361CB800B78E9F /* Sources */,
-				C07C3CF71A361CB800B78E9F /* Frameworks */,
-				C07C3CF81A361CB800B78E9F /* Resources */,
+				C07C3D2E1A361F5000B78E9F /* Sources */,
+				C07C3D2F1A361F5000B78E9F /* Frameworks */,
+				C07C3D301A361F5000B78E9F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -144,46 +141,46 @@
 			);
 			name = CapitolWords;
 			productName = CapitolWords;
-			productReference = C07C3CFA1A361CB800B78E9F /* CapitolWords.app */;
+			productReference = C07C3D321A361F5000B78E9F /* CapitolWords.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C07C3D181A361CB800B78E9F /* CapitolWordsTests */ = {
+		C07C3D4D1A361F5000B78E9F /* CapitolWordsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C07C3D261A361CB900B78E9F /* Build configuration list for PBXNativeTarget "CapitolWordsTests" */;
+			buildConfigurationList = C07C3D5B1A361F5000B78E9F /* Build configuration list for PBXNativeTarget "CapitolWordsTests" */;
 			buildPhases = (
-				C07C3D151A361CB800B78E9F /* Sources */,
-				C07C3D161A361CB800B78E9F /* Frameworks */,
-				C07C3D171A361CB800B78E9F /* Resources */,
+				C07C3D4A1A361F5000B78E9F /* Sources */,
+				C07C3D4B1A361F5000B78E9F /* Frameworks */,
+				C07C3D4C1A361F5000B78E9F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C07C3D1B1A361CB800B78E9F /* PBXTargetDependency */,
+				C07C3D501A361F5000B78E9F /* PBXTargetDependency */,
 			);
 			name = CapitolWordsTests;
 			productName = CapitolWordsTests;
-			productReference = C07C3D191A361CB800B78E9F /* CapitolWordsTests.xctest */;
+			productReference = C07C3D4E1A361F5000B78E9F /* CapitolWordsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C07C3CF21A361CB800B78E9F /* Project object */ = {
+		C07C3D2A1A361F5000B78E9F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Carticipate, Inc.";
 				TargetAttributes = {
-					C07C3CF91A361CB800B78E9F = {
+					C07C3D311A361F5000B78E9F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					C07C3D181A361CB800B78E9F = {
+					C07C3D4D1A361F5000B78E9F = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = C07C3CF91A361CB800B78E9F;
+						TestTargetID = C07C3D311A361F5000B78E9F;
 					};
 				};
 			};
-			buildConfigurationList = C07C3CF51A361CB800B78E9F /* Build configuration list for PBXProject "CapitolWords" */;
+			buildConfigurationList = C07C3D2D1A361F5000B78E9F /* Build configuration list for PBXProject "CapitolWords" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -191,29 +188,29 @@
 				en,
 				Base,
 			);
-			mainGroup = C07C3CF11A361CB800B78E9F;
-			productRefGroup = C07C3CFB1A361CB800B78E9F /* Products */;
+			mainGroup = C07C3D291A361F5000B78E9F;
+			productRefGroup = C07C3D331A361F5000B78E9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C07C3CF91A361CB800B78E9F /* CapitolWords */,
-				C07C3D181A361CB800B78E9F /* CapitolWordsTests */,
+				C07C3D311A361F5000B78E9F /* CapitolWords */,
+				C07C3D4D1A361F5000B78E9F /* CapitolWordsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C07C3CF81A361CB800B78E9F /* Resources */ = {
+		C07C3D301A361F5000B78E9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07C3D0F1A361CB800B78E9F /* Main.storyboard in Resources */,
-				C07C3D141A361CB800B78E9F /* LaunchScreen.xib in Resources */,
-				C07C3D111A361CB800B78E9F /* Images.xcassets in Resources */,
+				C07C3D441A361F5000B78E9F /* Main.storyboard in Resources */,
+				C07C3D491A361F5000B78E9F /* LaunchScreen.xib in Resources */,
+				C07C3D461A361F5000B78E9F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C07C3D171A361CB800B78E9F /* Resources */ = {
+		C07C3D4C1A361F5000B78E9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,49 +220,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C07C3CF61A361CB800B78E9F /* Sources */ = {
+		C07C3D2E1A361F5000B78E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07C3D0C1A361CB800B78E9F /* DetailViewController.m in Sources */,
-				C07C3D091A361CB800B78E9F /* MasterViewController.m in Sources */,
-				C07C3D031A361CB800B78E9F /* AppDelegate.m in Sources */,
-				C07C3D061A361CB800B78E9F /* CapitolWords.xcdatamodeld in Sources */,
-				C07C3D001A361CB800B78E9F /* main.m in Sources */,
+				C07C3D3B1A361F5000B78E9F /* AppDelegate.m in Sources */,
+				C07C3D3E1A361F5000B78E9F /* MasterViewController.m in Sources */,
+				C07C3D381A361F5000B78E9F /* main.m in Sources */,
+				C07C3D411A361F5000B78E9F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C07C3D151A361CB800B78E9F /* Sources */ = {
+		C07C3D4A1A361F5000B78E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07C3D201A361CB900B78E9F /* CapitolWordsTests.m in Sources */,
+				C07C3D551A361F5000B78E9F /* CapitolWordsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C07C3D1B1A361CB800B78E9F /* PBXTargetDependency */ = {
+		C07C3D501A361F5000B78E9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C07C3CF91A361CB800B78E9F /* CapitolWords */;
-			targetProxy = C07C3D1A1A361CB800B78E9F /* PBXContainerItemProxy */;
+			target = C07C3D311A361F5000B78E9F /* CapitolWords */;
+			targetProxy = C07C3D4F1A361F5000B78E9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C07C3D0D1A361CB800B78E9F /* Main.storyboard */ = {
+		C07C3D421A361F5000B78E9F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C07C3D0E1A361CB800B78E9F /* Base */,
+				C07C3D431A361F5000B78E9F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C07C3D121A361CB800B78E9F /* LaunchScreen.xib */ = {
+		C07C3D471A361F5000B78E9F /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C07C3D131A361CB800B78E9F /* Base */,
+				C07C3D481A361F5000B78E9F /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -273,7 +269,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C07C3D211A361CB900B78E9F /* Debug */ = {
+		C07C3D561A361F5000B78E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,7 +311,7 @@
 			};
 			name = Debug;
 		};
-		C07C3D221A361CB900B78E9F /* Release */ = {
+		C07C3D571A361F5000B78E9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,7 +347,7 @@
 			};
 			name = Release;
 		};
-		C07C3D241A361CB900B78E9F /* Debug */ = {
+		C07C3D591A361F5000B78E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -361,7 +357,7 @@
 			};
 			name = Debug;
 		};
-		C07C3D251A361CB900B78E9F /* Release */ = {
+		C07C3D5A1A361F5000B78E9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -371,7 +367,7 @@
 			};
 			name = Release;
 		};
-		C07C3D271A361CB900B78E9F /* Debug */ = {
+		C07C3D5C1A361F5000B78E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -390,7 +386,7 @@
 			};
 			name = Debug;
 		};
-		C07C3D281A361CB900B78E9F /* Release */ = {
+		C07C3D5D1A361F5000B78E9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -408,45 +404,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C07C3CF51A361CB800B78E9F /* Build configuration list for PBXProject "CapitolWords" */ = {
+		C07C3D2D1A361F5000B78E9F /* Build configuration list for PBXProject "CapitolWords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C07C3D211A361CB900B78E9F /* Debug */,
-				C07C3D221A361CB900B78E9F /* Release */,
+				C07C3D561A361F5000B78E9F /* Debug */,
+				C07C3D571A361F5000B78E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C07C3D231A361CB900B78E9F /* Build configuration list for PBXNativeTarget "CapitolWords" */ = {
+		C07C3D581A361F5000B78E9F /* Build configuration list for PBXNativeTarget "CapitolWords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C07C3D241A361CB900B78E9F /* Debug */,
-				C07C3D251A361CB900B78E9F /* Release */,
+				C07C3D591A361F5000B78E9F /* Debug */,
+				C07C3D5A1A361F5000B78E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		C07C3D261A361CB900B78E9F /* Build configuration list for PBXNativeTarget "CapitolWordsTests" */ = {
+		C07C3D5B1A361F5000B78E9F /* Build configuration list for PBXNativeTarget "CapitolWordsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C07C3D271A361CB900B78E9F /* Debug */,
-				C07C3D281A361CB900B78E9F /* Release */,
+				C07C3D5C1A361F5000B78E9F /* Debug */,
+				C07C3D5D1A361F5000B78E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C07C3D041A361CB800B78E9F /* CapitolWords.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C07C3D051A361CB800B78E9F /* CapitolWords.xcdatamodel */,
-			);
-			currentVersion = C07C3D051A361CB800B78E9F /* CapitolWords.xcdatamodel */;
-			path = CapitolWords.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = C07C3CF21A361CB800B78E9F /* Project object */;
+	rootObject = C07C3D2A1A361F5000B78E9F /* Project object */;
 }
