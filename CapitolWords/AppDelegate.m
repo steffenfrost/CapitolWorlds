@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 
+#define kSUNLIGHTFOUNDATION_API_KEY @"my secret key"
+
+
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
