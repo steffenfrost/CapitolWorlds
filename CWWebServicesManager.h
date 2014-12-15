@@ -1,5 +1,5 @@
 //
-//  CWWebServices.h
+//  CWWebServicesManager.h
 //  CapitolWords
 //
 //  Created by Steven Frost-Ruebling on 12/14/14.
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, WebServiceStatus) {
 };
 
 
-@interface CWWebServices : NSObject
+@interface CWWebServicesManager : NSObject
 @property (nonatomic, assign) WebServiceStatus status; // Redeclare status as writeable.
 
 + (instancetype)sharedManager;

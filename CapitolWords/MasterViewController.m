@@ -8,7 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "CWWebServices.h"
+#import "CWWebServicesManager.h"
 
 @interface MasterViewController ()
 
@@ -73,7 +73,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[CWWebServices sharedManager] words] count];
+    return [[[CWWebServicesManager sharedManager] words] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,7 +83,7 @@
 //    cell.textLabel.text = aWord.word;
     
     // ** Just for test
-    NSString *aWord = [[[CWWebServices sharedManager] words] objectAtIndex:indexPath.row];
+    NSString *aWord = [[[CWWebServicesManager sharedManager] words] objectAtIndex:indexPath.row];
     cell.textLabel.text = aWord;
     // ** Just for test
     
@@ -116,7 +116,7 @@
 
 - (void)showOrHideNavPrompt
 {
-    NSUInteger count = [[CWWebServices sharedManager] words].count;
+    NSUInteger count = [[CWWebServicesManager sharedManager] words].count;
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -130,7 +130,7 @@
 
 - (void)downloadWords
 {
-    [[CWWebServices sharedManager] downloadWordsWithCompletionBlock:^(NSError *error) {
+    [[CWWebServicesManager sharedManager] downloadWordsWithCompletionBlock:^(NSError *error) {
         
         // This completion block currently executes at the wrong time
         NSString *message = error ? [error localizedDescription] : @"The words have finished downloading";

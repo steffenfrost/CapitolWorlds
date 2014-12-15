@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0423FF31A3EAE4C00AE1794 /* CWWebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF21A3EAE4C00AE1794 /* CWWebServices.m */; };
-		C0423FF41A3EAE4C00AE1794 /* CWWebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF21A3EAE4C00AE1794 /* CWWebServices.m */; };
+		C0423FF31A3EAE4C00AE1794 /* CWWebServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF21A3EAE4C00AE1794 /* CWWebServicesManager.m */; };
+		C0423FF41A3EAE4C00AE1794 /* CWWebServicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF21A3EAE4C00AE1794 /* CWWebServicesManager.m */; };
 		C0423FF71A3EB0AE00AE1794 /* CWWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF61A3EB0AE00AE1794 /* CWWord.m */; };
 		C0423FF81A3EB0AE00AE1794 /* CWWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C0423FF61A3EB0AE00AE1794 /* CWWord.m */; };
 		C07C3D381A361F5000B78E9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07C3D371A361F5000B78E9F /* main.m */; };
@@ -32,8 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C0423FF11A3EAE4C00AE1794 /* CWWebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWebServices.h; sourceTree = "<group>"; };
-		C0423FF21A3EAE4C00AE1794 /* CWWebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWebServices.m; sourceTree = "<group>"; };
+		C0423FF11A3EAE4C00AE1794 /* CWWebServicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWebServicesManager.h; sourceTree = "<group>"; };
+		C0423FF21A3EAE4C00AE1794 /* CWWebServicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWebServicesManager.m; sourceTree = "<group>"; };
 		C0423FF51A3EB0AE00AE1794 /* CWWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWord.h; sourceTree = "<group>"; };
 		C0423FF61A3EB0AE00AE1794 /* CWWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWord.m; sourceTree = "<group>"; };
 		C07C3D321A361F5000B78E9F /* CapitolWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitolWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +74,8 @@
 		C0423FF01A3EA62A00AE1794 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
-				C0423FF11A3EAE4C00AE1794 /* CWWebServices.h */,
-				C0423FF21A3EAE4C00AE1794 /* CWWebServices.m */,
+				C0423FF11A3EAE4C00AE1794 /* CWWebServicesManager.h */,
+				C0423FF21A3EAE4C00AE1794 /* CWWebServicesManager.m */,
 				C0423FF51A3EB0AE00AE1794 /* CWWord.h */,
 				C0423FF61A3EB0AE00AE1794 /* CWWord.m */,
 			);
@@ -249,7 +249,7 @@
 				C07C3D3E1A361F5000B78E9F /* MasterViewController.m in Sources */,
 				C07C3D381A361F5000B78E9F /* main.m in Sources */,
 				C07C3D411A361F5000B78E9F /* DetailViewController.m in Sources */,
-				C0423FF31A3EAE4C00AE1794 /* CWWebServices.m in Sources */,
+				C0423FF31A3EAE4C00AE1794 /* CWWebServicesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0423FF41A3EAE4C00AE1794 /* CWWebServices.m in Sources */,
+				C0423FF41A3EAE4C00AE1794 /* CWWebServicesManager.m in Sources */,
 				C0423FF81A3EB0AE00AE1794 /* CWWord.m in Sources */,
 				C07C3D551A361F5000B78E9F /* CapitolWordsTests.m in Sources */,
 			);

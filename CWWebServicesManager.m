@@ -1,12 +1,12 @@
 //
-//  CWWebServices.m
+//  CWWebServicesManager.m
 //  CapitolWords
 //
 //  Created by Steven Frost-Ruebling on 12/14/14.
 //  Copyright (c) 2014 Carticipate, Inc. All rights reserved.
 //
 
-#import "CWWebServices.h"
+#import "CWWebServicesManager.h"
 
 NSString *const kWebServicesManagerContentUpdateNotification = @"com.carticipate.CapitolWords.WebServicesManagerMangerContentUpdate";
 
@@ -17,13 +17,13 @@ NSString *const kDec2014TopWordsURLString    = @"https://api.github.com/users/st
 NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100apikey=b7bb399593324f1da12c40977fc2598d";
 
 
-@interface CWWebServices ()
+@interface CWWebServicesManager ()
 @property (nonatomic, strong) NSMutableArray *wordsArray;
 @property (nonatomic, strong) dispatch_queue_t concurrentDownloadQueue;
 
 @end
 
-@implementation CWWebServices
+@implementation CWWebServicesManager
 
 - (instancetype) init {
     self = [super init];
@@ -37,11 +37,11 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
 
 + (instancetype)sharedManager
 {
-    static CWWebServices *sharedWebServicesManager = nil;
+    static CWWebServicesManager *sharedWebServicesManager = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedWebServicesManager = [[CWWebServices alloc] init];
+        sharedWebServicesManager = [[CWWebServicesManager alloc] init];
     });
     
     return sharedWebServicesManager;
