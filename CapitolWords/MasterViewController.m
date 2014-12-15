@@ -60,7 +60,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CWWord *aWord = [[CWWebServicesManager sharedManager] words][indexPath.row];
         DetailViewController *detailViewController = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [detailViewController setDetailItem:aWord.word];
+        [detailViewController setDetailItem:aWord];
 //        detailViewController.detailDescriptionLabel.text = aWord.word;
         detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         detailViewController.navigationItem.leftItemsSupplementBackButton = YES;

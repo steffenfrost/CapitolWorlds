@@ -28,7 +28,9 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        CWWord *aWord = (CWWord*)self.detailItem;
+        self.detailDescriptionLabel.text = aWord.word;
+        self.detailCountLabel.text       = aWord.count;
     }
 }
 
