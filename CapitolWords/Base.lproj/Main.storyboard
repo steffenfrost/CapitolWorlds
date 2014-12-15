@@ -53,25 +53,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="0XM-y9-sOw" secondAttribute="centerX" constant="204.5" id="7ua-vm-qOj"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="mMv-Sp-bNQ" secondAttribute="leading" id="EsA-L2-vxN"/>
                             <constraint firstAttribute="centerY" secondItem="0XM-y9-sOw" secondAttribute="centerY" constant="8.5" id="Ezo-iW-Of3"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
                             <constraint firstAttribute="centerX" secondItem="0XM-y9-sOw" secondAttribute="centerX" constant="14.5" id="XFe-8y-ZXk"/>
                             <constraint firstItem="f27-VV-yZu" firstAttribute="leading" secondItem="mMv-Sp-bNQ" secondAttribute="trailing" constant="13" id="ZaX-it-VKL"/>
                             <constraint firstItem="mMv-Sp-bNQ" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="top" constant="63" id="bgH-nd-9GO"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
                             <constraint firstItem="mMv-Sp-bNQ" firstAttribute="baseline" secondItem="f27-VV-yZu" secondAttribute="baseline" id="jku-Lv-Tvl"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="7ua-vm-qOj"/>
-                                <exclude reference="Tsc-yG-G1q"/>
-                                <exclude reference="jWN-iV-94e"/>
-                                <exclude reference="tHV-ZD-HQj"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
