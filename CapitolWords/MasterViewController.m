@@ -58,11 +58,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        CWWord *aWord = [[CWWebServicesManager sharedManager] words][indexPath.row];
+        DetailViewController *detailViewController = (DetailViewController *)[[segue destinationViewController] topViewController];
+        [detailViewController setDetailItem:aWord.word];
+//        detailViewController.detailDescriptionLabel.text = aWord.word;
+        detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
     }
 }
 
