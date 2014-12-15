@@ -73,14 +73,20 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return [[[CWWebServices sharedManager] words] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+//    CWWord *aWord = [[[CWWebServices sharedManager] words] objectAtIndex:indexPath.row];
+//    cell.textLabel.text = aWord.word;
+    
+    // ** Just for test
+    NSString *aWord = [[[CWWebServices sharedManager] words] objectAtIndex:indexPath.row];
+    cell.textLabel.text = aWord;
+    // ** Just for test
+    
     return cell;
 }
 

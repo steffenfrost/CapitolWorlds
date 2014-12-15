@@ -85,6 +85,7 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
 
         if (data) {
             // Convert the returned data into a dictionary.
+            self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy];
 
         }
         
