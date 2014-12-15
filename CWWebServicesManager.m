@@ -71,28 +71,32 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error && data) {
             self.status = kWebServiceStatusSuccess;
+        
+            
             NSError *error;
             NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             NSLog(@"The returned dictionary: %@", returnedDict);
+            
+            // Convert the returned data into a dictionary.
+            
+            dispatch_barrier_async(self.concurrentDownloadQueue, ^{
+                self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy]; // Just for quick test.
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSNotification *notification = [NSNotification notificationWithName:kWebServicesManagerContentUpdateNotification object:nil];
+                    [[NSNotificationQueue defaultQueue] enqueueNotification:notification postingStyle:NSPostASAP coalesceMask:NSNotificationCoalescingOnName forModes:nil];
+                });
+            });
 
         } else if (error){
             self.status = kWebServiceStatusFailed;
             NSLog(@"We errored: %@", error);
         }
+        
         if (completionBlock) {
             completionBlock(error);
         }
-
-        if (data) {
-            // Convert the returned data into a dictionary.
-            self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy];
-
-        }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSNotification *notification = [NSNotification notificationWithName:kWebServicesManagerContentUpdateNotification object:nil];
-            [[NSNotificationQueue defaultQueue] enqueueNotification:notification postingStyle:NSPostASAP coalesceMask:NSNotificationCoalescingOnName forModes:nil];
-        });
     }];
     
     [task resume];
