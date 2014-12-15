@@ -11,7 +11,9 @@
 NSString *const kWebServicesManagerContentUpdateNotification = @"com.carticipate.CapitolWords.WebServicesManagerMangerContentUpdate";
 
 NSString *const kBaseApiURLString = @"http://capitolwords.org/api/1/";
-NSString *const kDec2014TopWordsURLString    = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&apikey=b7bb399593324f1da12c40977fc2598d";
+NSString *const kDec2014TopWordsURLString    = @"https://api.github.com/users/steffenfrost/repos";
+
+//NSString *const kDec2014TopWordsURLString    = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&apikey=b7bb399593324f1da12c40977fc2598d";
 NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100apikey=b7bb399593324f1da12c40977fc2598d";
 
 
