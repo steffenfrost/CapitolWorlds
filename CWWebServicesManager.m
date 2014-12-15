@@ -74,13 +74,23 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
         
             
             NSError *error;
-            NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            NSLog(@"The returned dictionary: %@", returnedDict);
+            NSMutableArray *returnedArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//          NSLog(@"The returned dictionary: %@", returnedArray);
             
             // Convert the returned data into a dictionary.
+            NSMutableArray *buildingArrayOfWords = [NSMutableArray array];
+            for (NSDictionary *aRepo in returnedArray) {
+                NSLog(@"Repo: %@", aRepo);
+                CWWord *aWord = [[CWWord alloc] init];
+                aWord.word  = [aRepo objectForKey:@"name"];
+                NSLog(@"Count is: %@", [[aRepo objectForKey:@"size"] stringValue]);
+                aWord.count = [[aRepo objectForKey:@"size"] stringValue];
+                [buildingArrayOfWords addObject:aWord];
+            }
             
             dispatch_barrier_async(self.concurrentDownloadQueue, ^{
-                self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy]; // Just for quick test.
+//              self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy]; // Just for quick test.
+                self.wordsArray = buildingArrayOfWords;
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     NSNotification *notification = [NSNotification notificationWithName:kWebServicesManagerContentUpdateNotification object:nil];

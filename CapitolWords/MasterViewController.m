@@ -79,13 +79,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-//    CWWord *aWord = [[[CWWebServices sharedManager] words] objectAtIndex:indexPath.row];
-//    cell.textLabel.text = aWord.word;
+    CWWord *aWord = [[[CWWebServicesManager sharedManager] words] objectAtIndex:indexPath.row];
+    cell.textLabel.text = aWord.word;
     
-    // ** Just for test
-    NSString *aWord = [[[CWWebServicesManager sharedManager] words] objectAtIndex:indexPath.row];
-    cell.textLabel.text = aWord;
-    // ** Just for test
+//    // ** Just for test
+//    NSString *aWord = [[[CWWebServicesManager sharedManager] words] objectAtIndex:indexPath.row];
+//    cell.textLabel.text = aWord;
+//    // ** Just for test
     
     return cell;
 }
