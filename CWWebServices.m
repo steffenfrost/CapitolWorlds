@@ -69,18 +69,20 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error && data) {
             self.status = kWebServiceStatusSuccess;
-        } else {
+            NSError *error;
+            NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            NSLog(@"The returned dictionary: %@", returnedDict);
+
+        } else if (error){
             self.status = kWebServiceStatusFailed;
+            NSLog(@"We errored: %@", error);
         }
         if (completionBlock) {
             completionBlock(error);
         }
 
-        if (data != nil) {
+        if (data) {
             // Convert the returned data into a dictionary.
-            NSError *error;
-            NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            NSLog(@"The returned dictionary: %@", returnedDict);
 
         }
         

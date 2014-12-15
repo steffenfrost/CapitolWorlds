@@ -38,6 +38,8 @@
                                              selector:@selector(contentChangedNotification:)
                                                  name:kWebServicesManagerContentUpdateNotification
                                                object:nil];
+    
+    [self downloadWords];
 
 }
 
