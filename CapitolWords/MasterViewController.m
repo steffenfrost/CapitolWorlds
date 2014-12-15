@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "CWWebServices.h"
 
 @interface MasterViewController ()
 
@@ -32,12 +33,14 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(contentChangedNotification:)
+                                                 name:kWebServicesManagerContentUpdateNotification
+                                               object:nil];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)insertNewObject:(id)sender {
     if (!self.objects) {
@@ -92,5 +95,51 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+
+//*****************************************************************************/
+#pragma mark - Private Methods
+//*****************************************************************************/
+
+- (void)contentChangedNotification:(NSNotification *)notification
+{
+    [self.tableView reloadData];
+    [self showOrHideNavPrompt];
+}
+
+- (void)showOrHideNavPrompt
+{
+    NSUInteger count = [[CWWebServices sharedManager] words].count;
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        if (!count) {
+            [self.navigationItem setPrompt:@"Words Congressmen say!"];
+        } else {
+            [self.navigationItem setPrompt:nil];
+        }
+    });
+}
+
+- (void)downloadWords
+{
+    [[CWWebServices sharedManager] downloadWordsWithCompletionBlock:^(NSError *error) {
+        
+        // This completion block currently executes at the wrong time
+        NSString *message = error ? [error localizedDescription] : @"The words have finished downloading";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Download Complete"
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+    }];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 @end
