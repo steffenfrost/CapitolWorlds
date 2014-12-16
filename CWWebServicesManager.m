@@ -68,46 +68,53 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
     
     NSURL *url = [NSURL URLWithString:kDec2014TopWordsURLString];
     
-    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (!error && data) {
+    __block NSError *error;
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *taskError) {
+        if (!taskError && data) {
             self.status = kWebServiceStatusSuccess;
         
             
-            NSError *error;
-            NSMutableArray *returnedArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//          NSLog(@"The returned dictionary: %@", returnedArray);
+            NSError *serializationError;
+            NSMutableArray *returnedArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&serializationError];
             
             // Convert the returned data into a dictionary.
-            NSMutableArray *buildingArrayOfWords = [NSMutableArray array];
-            for (NSDictionary *aRepo in returnedArray) {
-                NSLog(@"Repo: %@", aRepo);
-                CWWord *aWord = [[CWWord alloc] init];
-                aWord.word  = [aRepo objectForKey:@"name"];
-                NSLog(@"Count is: %@", [[aRepo objectForKey:@"size"] stringValue]);
-                aWord.count = [[aRepo objectForKey:@"size"] stringValue];
-                [buildingArrayOfWords addObject:aWord];
+            if (!serializationError) {
+                NSMutableArray *buildingArrayOfWords = [NSMutableArray array];
+                for (NSDictionary *aRepo in returnedArray) {
+                    NSLog(@"Repo: %@", aRepo);
+                    CWWord *aWord = [[CWWord alloc] init];
+                    aWord.word  = [aRepo objectForKey:@"name"];
+                    NSLog(@"Count is: %@", [[aRepo objectForKey:@"size"] stringValue]);
+                    aWord.count = [[aRepo objectForKey:@"size"] stringValue];
+                    [buildingArrayOfWords addObject:aWord];
+                }
+                
+                // Now do a thread safe write to our array
+                dispatch_barrier_async(self.concurrentDownloadQueue, ^{
+                    self.wordsArray = buildingArrayOfWords;
+                });
+            }
+            else {
+                error = serializationError;
             }
             
-            dispatch_barrier_async(self.concurrentDownloadQueue, ^{
-//              self.wordsArray = [@[@"testing", @"if", @"our callbacks", @"work"] mutableCopy]; // Just for quick test.
-                self.wordsArray = buildingArrayOfWords;
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSNotification *notification = [NSNotification notificationWithName:kWebServicesManagerContentUpdateNotification object:nil];
-                    [[NSNotificationQueue defaultQueue] enqueueNotification:notification postingStyle:NSPostASAP coalesceMask:NSNotificationCoalescingOnName forModes:nil];
-                });
-            });
 
-        } else if (error){
+        } else if (taskError){
             self.status = kWebServiceStatusFailed;
-            NSLog(@"We errored: %@", error);
+            error = taskError;
+            NSLog(@"We errored: %@", taskError);
         }
         
-        if (completionBlock) {
-            completionBlock(error);
-        }
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSNotification *notification = [NSNotification notificationWithName:kWebServicesManagerContentUpdateNotification object:nil];
+            [[NSNotificationQueue defaultQueue] enqueueNotification:notification postingStyle:NSPostASAP coalesceMask:NSNotificationCoalescingOnName forModes:nil];
+        });
     }];
+
+    if (completionBlock) {
+        completionBlock(error);
+    }
+
     
     [task resume];
 }
