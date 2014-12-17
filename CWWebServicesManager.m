@@ -21,7 +21,7 @@ NSString *const kBaseApiURLString = @"http://capitolwords.org/api/1/";
 //NSString *const kDec2014TopWordsURLString    = @"https://api.github.com/users/steffenfrost/repos";
 
 NSString *const kDec2014TopWordsURLString    = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&apikey=";
-NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100apikey=";
+NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100&apikey=";
 
 
 @interface CWWebServicesManager ()
@@ -74,7 +74,6 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
     });
     
     NSString *urlString = [kDec2014Top100WordsURLString stringByAppendingString:kMySecretAPIKey];
-    NSLog(@"url is: %@", urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     
     __block NSError *error;
