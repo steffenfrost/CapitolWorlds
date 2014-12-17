@@ -7,14 +7,21 @@
 //
 
 #import "CWWebServicesManager.h"
+#import "CWWord.h"
+#import "MySecretAPIKey.h"
+
+
+NSString *const kCWWordCountKey = @"count";
+NSString *const kCWWordWordKey  = @"ngram";
+
 
 NSString *const kWebServicesManagerContentUpdateNotification = @"com.carticipate.CapitolWords.WebServicesManagerMangerContentUpdate";
 
 NSString *const kBaseApiURLString = @"http://capitolwords.org/api/1/";
-NSString *const kDec2014TopWordsURLString    = @"https://api.github.com/users/steffenfrost/repos";
+//NSString *const kDec2014TopWordsURLString    = @"https://api.github.com/users/steffenfrost/repos";
 
-//NSString *const kDec2014TopWordsURLString    = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&apikey=b7bb399593324f1da12c40977fc2598d";
-NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100apikey=b7bb399593324f1da12c40977fc2598d";
+NSString *const kDec2014TopWordsURLString    = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&apikey=";
+NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/phrases.json?entity_type=month&entity_value=201412&sort=count+desc&page=1&per_page=100apikey=";
 
 
 @interface CWWebServicesManager ()
@@ -66,15 +73,16 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
         session = [NSURLSession sessionWithConfiguration:configuration];
     });
     
-    NSURL *url = [NSURL URLWithString:kDec2014TopWordsURLString];
+    NSString *urlString = [kDec2014Top100WordsURLString stringByAppendingString:kMySecretAPIKey];
+    NSURL *url = [NSURL URLWithString:urlString];
     
     __block NSError *error;
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *taskError) {
         if (!taskError && data) {
             self.status = kWebServiceStatusSuccess;
         
-            
-            NSError *serializationError;
+// This is for GitHub API
+/*            NSError *serializationError;
             NSMutableArray *returnedArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&serializationError];
             
             // Convert the returned data into a dictionary.
@@ -97,6 +105,29 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
             else {
                 error = serializationError;
             }
+*/
+            NSError *serializationError;
+            NSArray *returnedArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&serializationError];
+            
+            // Convert the returned data into a dictionary.
+            if (!serializationError) {
+                NSMutableArray *buildingArrayOfWords = [NSMutableArray array];
+                for (NSDictionary *aWordDict in returnedArray) {
+                    CWWord *aWord = [[CWWord alloc] init];
+                    aWord.word  = [aWordDict objectForKey:kCWWordWordKey];
+                    aWord.count = [[aWordDict objectForKey:kCWWordCountKey] stringValue];
+                    [buildingArrayOfWords addObject:aWord];
+                }
+                
+                // Now do a thread safe write to our array
+                dispatch_barrier_async(self.concurrentDownloadQueue, ^{
+                    self.wordsArray = buildingArrayOfWords;
+                });
+            }
+            else {
+                error = serializationError;
+            }
+
             
 
         } else if (taskError){

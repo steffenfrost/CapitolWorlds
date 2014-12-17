@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
-#import "CWWord.h"
 
 /// Notification when content updates (i.e. Download finishes)
 extern NSString *const kWebServicesManagerContentUpdateNotification;

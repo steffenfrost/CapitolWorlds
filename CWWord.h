@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+//NSString *const kCWWordCountKey = @"count";
+//NSString *const kCWWordWordKey  = @"ngram";
+
 @interface CWWord : NSObject
 
 @property (nonatomic, strong) NSString *count; // key: "count"
