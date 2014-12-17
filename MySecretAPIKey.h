@@ -9,6 +9,6 @@
 #ifndef CapitolWords_MySecretAPIKey_h
 #define CapitolWords_MySecretAPIKey_h
 
-NSString *const kMySecretAPIKey = @"my secret key";
+NSString *const kMySecretAPIKey = @"b7bb399593324f1da12c40977fc2598d";
 
 #endif

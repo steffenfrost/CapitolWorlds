@@ -167,3 +167,6 @@ xcuserdata
 # Added by Joost on 2/25/2014 as part of option 1: ignore *.xcworkspace in Number1
 #*.xcworkspace
 
+# Added by Steffen on 12/16/2014 to make sure you don't post your private key in a public repo
+# MySecretAPIKey.h
+MySecretAPIKey.h

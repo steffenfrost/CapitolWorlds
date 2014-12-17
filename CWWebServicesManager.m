@@ -74,6 +74,7 @@ NSString *const kDec2014Top100WordsURLString = @"http://capitolwords.org/api/1/p
     });
     
     NSString *urlString = [kDec2014Top100WordsURLString stringByAppendingString:kMySecretAPIKey];
+    NSLog(@"url is: %@", urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     
     __block NSError *error;
