@@ -9,6 +9,7 @@
 #ifndef CapitolWords_MySecretAPIKey_h
 #define CapitolWords_MySecretAPIKey_h
 
-NSString *const kMySecretAPIKey = @"b7bb399593324f1da12c40977fc2598d";
+// https://login.sunlightfoundation.com/accounts/signup
+NSString *const kMySecretAPIKey = @"my secret key";
 
 #endif
